@@ -1,0 +1,5 @@
+Project 1 - Exercise 2.1: Adding Styles to Your Digital CV
+
+Now that you've woven the structure of your digital CV with HTML, it's time to bring it to life with CSS. Just like the clothes we wear reflect our personality, the styling of a website gives it a unique identity. In this exercise, you'll wield CSS to infuse colors, fonts, and font sizes that resonate with your personal brand, setting the mood and making your digital canvas truly yours. Let's dive in and paint your web wizardry with CSS!
+
+For this submission, you will enhance the CV you have already made by adding CSS styling, focusing on colors, fonts and font sizes. After you are done with the work, please check our solution file linked in the project instructions below. Remember to create a new project folder for each new step and add them to a publicly accessible Google Drive link while submitting.
