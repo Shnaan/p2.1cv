@@ -23,13 +23,34 @@ img
        font-style:none;
 
 }
-.main-header a:link{
-      color:rgb(10, 10, 217); /* color for unvisited link*/
-      text-decoration: none; /* remove the undeline from the link*/
      
-}
-.main-header a:visited{
-       color:rgb(4, 44, 4); /* color for visited link*/
+
+a:visited{
+       color:rgb(78, 88, 165); /* light blue  color for visited link to differentiate  visted link */
       text-decoration: none;
 
+}
+
+a
+{
+  text-decoration: none; /* Removing default underline from links */
+  color: #081fcc; /* A blue color match with familiar web link colr for links for better distinction */
+}
+
+/* Styling for list items */
+li
+{
+  font-size: 1rem; /* Set the same font size as paragraphs */
+}
+
+/* Styling for table */
+table
+{
+  font-size: 1rem; /* Set the same font size as paragraphs */
+}
+
+/* Styling for form */
+form
+{
+  font-size: 1rem; /* Set the same font size as paragraphs */
 }
