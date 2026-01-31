@@ -1,0 +1,35 @@
+/* Styling CV page */
+ body
+   {
+     font-family: "Source Code Pro", monospace,Arial, Helvetica, sans-serif; /* Use Google Font for modern monospace look and font stack as backup fonts */
+     font-size: 16px; /* Set a base font size */
+     line-height: 2; /* Increase line height for better readability */
+     color: #010301; /* black color for the text */
+     background-color:#fdfcfc  /* Set light silver color for  background  appearance */
+}  
+
+img 
+    {
+      display: block; /* img default display is  inline,to center it using marign:auto declaration  need to convert it to block display(margin:auto doesn't have effect on inline elements)  */
+      margin: auto; /*center image in the middile */
+  
+}
+.main-header{
+      text-align:center; /*enter address link with image for more orgnized  apperance */
+      line-height: .5; /* reduce line hegith to reduce space reserved for image and header section*/
+      text-decoration: none;
+      word-spacing: -3px; /* reduce space between words to bring elements to the center*/
+      letter-spacing: -0.5px; /* reduce space between letters to bring elements to the center*/
+       font-style:none;
+
+}
+.main-header a:link{
+      color:rgb(10, 10, 217); /* color for unvisited link*/
+      text-decoration: none; /* remove the undeline from the link*/
+     
+}
+.main-header a:visited{
+       color:rgb(4, 44, 4); /* color for visited link*/
+      text-decoration: none;
+
+}
