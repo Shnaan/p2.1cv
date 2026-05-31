@@ -1,0 +1,123 @@
+2- Configuration: Set your global username and email with Git.
+
+
+PS C:\Users\fshnn> git config --global user.name "shanan"
+PS C:\Users\fshnn> git config --global user.email "shana@gmail.com"
+
+3- Initialization
+
+
+PS C:\Users\fshnn> mkdir GitAdventure
+
+
+    Directory: C:\Users\fshnn
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         5/30/2026   9:14 PM                GitAdventure
+
+
+PS C:\Users\fshnn> cd .\GitAdventure\
+PS C:\Users\fshnn\GitAdventure> git init
+Initialized empty Git repository in C:/Users/fshnn/GitAdventure/.git/
+
+4- Staging and Committing
+
+
+PS C:\Users\fshnn\GitAdventure> edit journey.txt
+PS C:\Users\fshnn\GitAdventure> edit journey.txt
+PS C:\Users\fshnn\GitAdventure> git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        journey.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\fshnn\GitAdventure> git add journey.txt
+PS C:\Users\fshnn\GitAdventure> git commit -m "add journey.txt"
+[main (root-commit) 08b9e85] add journey.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 journey.txt
+PS C:\Users\fshnn\GitAdventure> git status
+On branch main
+nothing to commit, working tree clean
+
+5- Deletion
+
+
+PS C:\Users\fshnn\GitAdventure> edit temp.txt
+PS C:\Users\fshnn\GitAdventure> git add .\temp.txt
+PS C:\Users\fshnn\GitAdventure> git commit -m "add temp.txt"
+[main f9a2866] add temp.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 temp.txt
+PS C:\Users\fshnn\GitAdventure> del temp.txt
+PS C:\Users\fshnn\GitAdventure> git rm temp.txt
+rm 'temp.txt'
+PS C:\Users\fshnn\GitAdventure> git commit -m "delete temp.txt"
+[main a66dd79] delete temp.txt
+ 1 file changed, 1 deletion(-)
+ delete mode 100644 temp.txt
+
+
+6- Renaming
+
+PS C:\Users\fshnn\GitAdventure> git mv .\journey.txt .\adventure.txt
+PS C:\Users\fshnn\GitAdventure> edit .\adventure.txt
+PS C:\Users\fshnn\GitAdventure> git add adventure.txt
+PS C:\Users\fshnn\GitAdventure> git commit -m "rename journey.txt to  adventure.txt add renamed file"
+[main 9491aa6] rename journey.txt to  adventure.txt add renamed file
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 adventure.txt
+ delete mode 100644 journey.txt
+
+7-Ignoring Files
+
+PS C:\Users\fshnn\GitAdventure> edit .gitignore
+PS C:\Users\fshnn\GitAdventure> git add .\.gitignore
+PS C:\Users\fshnn\GitAdventure> git commit -m "add .gitignore and .log file to the list"
+[main 06d141c] add .gitignore and .log file to the list
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+PS C:\Users\fshnn\GitAdventure> edit app.log
+PS C:\Users\fshnn\GitAdventure> git status
+On branch main
+nothing to commit, working tree clean
+
+
+
+8-Diving Deeper
+
+PS C:\Users\fshnn\GitAdventure> edit .\adventure.txt
+PS C:\Users\fshnn\GitAdventure> git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   adventure.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\fshnn\GitAdventure> git add .\adventure.txt
+PS C:\Users\fshnn\GitAdventure> git commit -m "add the updated adventure.txt"
+[main bfaebc9] add the updated adventure.txt
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+
+9- History and Restoration:
+
+PS C:\Users\fshnn\GitAdventure> git log --oneline --reverse
+08b9e85 add journey.txt
+f9a2866 add temp.txt
+a66dd79 delete temp.txt
+9491aa6 rename journey.txt to  adventure.txt add renamed file
+06d141c add .gitignore and .log file to the list
+bfaebc9 (HEAD -> main) add the updated adventure.txt
+
+PS C:\Users\fshnn\GitAdventure> git restore --source=bfaebc9  adventure.txt
+PS C:\Users\fshnn\GitAdventure> add adventure.txt
+PS C:\Users\fshnn\GitAdventure> git commit -m "restore adventrue.txt to previous state"
